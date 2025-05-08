@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Desde el Abismo</title>
+  <style>
+    body {
+      background-color: #0b0b0b;
+      color: #e6e6e6;
+      font-family: 'Courier New', Courier, monospace;
+      text-align: center;
+      padding: 50px;
+    }
+    .mist {
+      animation: mist 5s infinite alternate;
+    }
+    @keyframes mist {
+      0% { opacity: 0.3; }
+      100% { opacity: 0.7; }
+    }
+    #chatbox {
+      background-color: #1a1a1a;
+      border: 1px solid #333;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 600px;
+      border-radius: 10px;
+    }
+    input, button {
+      background-color: #333;
+      color: #e6e6e6;
+      border: none;
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1 class="mist">Desde el Abismo</h1>
+  <p>¿Te atreves a invocar lo que habita más allá?</p>
+
+  <div id="chatbox">
+    <div id="chat"></div>
+    <input type="text" id="userInput" placeholder="Escribe tu pregunta...">
+    <button onclick="sendMessage()">Enviar</button>
+  </div>
+
+  <script>
+    const chat = document.getElementById('chat');
+    function sendMessage() {
+      const input = document.getElementById('userInput');
+      const message = input.value;
+      if (!message) return;
+      chat.innerHTML += `<p><strong>Tú:</strong> ${message}</p>`;
+      input.value = '';
+      respond(message);
+    }
+
+    function respond(message) {
+      let reply = generadorEspeluznante(message);
+      setTimeout(() => {
+        chat.innerHTML += `<p><strong>Desde el Abismo:</strong> ${reply}</p>`;
+      }, 1000);
+    }
+
+    function generadorEspeluznante(pregunta) {
+      const respuestas = [
+        "No deberías haber preguntado eso...",
+        "Veo sombras detrás de ti...",
+        "La respuesta no te traerá paz...",
+        "Silencio... alguien escucha.",
+        "Todo comenzó con un susurro en la oscuridad."
+      ];
+      return respuestas[Math.floor(Math.random() * respuestas.length)];
+    }
+  </script>
+</body>
+</html>
