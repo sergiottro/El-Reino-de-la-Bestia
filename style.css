@@ -85,4 +85,49 @@ body {
     color: gray;
     padding-bottom: 20px;
   }
-  
+  /* --- Sección: Desde el Abismo --- */
+.abismo-body {
+  background-color: #0b0b0b;
+  color: #e6e6e6;
+  font-family: 'Courier New', Courier, monospace;
+  text-align: center;
+  padding: 50px;
+}
+
+.mist {
+  animation: mist 5s infinite alternate;
+}
+
+@keyframes mist {
+  0% { opacity: 0.3; }
+  100% { opacity: 0.7; }
+}
+
+#chatbox {
+  background-color: #1a1a1a;
+  border: 1px solid #333;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 10px;
+}
+
+#chatbox input,
+#chatbox button,
+.home-button a {
+  background-color: #333;
+  color: #e6e6e6;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+}
+.home-button a:hover {
+  background-color: crimson;
+    color: black;
+}
+#chatbox button:hover {
+  background-color: crimson;
+  color: black;
+  cursor: pointer;
+}
