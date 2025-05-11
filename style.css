@@ -16,7 +16,7 @@ body {
   }
   
   header {
-    background: url(https://images.pexels.com/photos/4762169/pexels-photo-4762169.jpeg) no-repeat center center;
+    background: url(img/title-background.png) no-repeat center center;
     background-size: cover;
     width: 100%;
     height: 20vw;
@@ -32,11 +32,12 @@ body {
     color: white;
     font-size: clamp(5px, 8vw, 80px);
     font-family: 'UnifrakturMaguntia';
+    text-align: center;
   }
   
   header img {
     max-height: 100%;
-    border: 1px solid white;
+    border: 1px solid gray;
   }
   
   nav {
